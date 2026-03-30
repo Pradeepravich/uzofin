@@ -14,6 +14,7 @@ import businessPay from "../assets/images/business-pay.png";
 import bgSection2 from "../assets/images/bg-section2.jpg";
 import arrowUp from "../assets/images/arrow-up.png";
 import ctaBg from "../assets/images/bg-apis-section.png";
+import bgIndustry from "../assets/images/bg-industry.jpg";
 
 const Home = () => {
   const features = [
@@ -40,6 +41,25 @@ const Home = () => {
     {
       title: "Scalable Infrastructure",
       desc: "Designed for startups to enterprises.",
+    },
+  ];
+
+  const cards = [
+    {
+      title: "Scalability & Integration",
+      desc: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed. Know more",
+    },
+    {
+      title: "Step-by-step guide",
+      desc: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed. Know more",
+    },
+    {
+      title: "SaaS based solution",
+      desc: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed. Know more",
+    },
+    {
+      title: "Modern Architecture",
+      desc: "Lorem ipsum is a dummy or placeholder text commonly used in graphic design, publishing, and web development. Its purpose is to permit a page layout to be designed. Know more",
     },
   ];
 
@@ -394,9 +414,8 @@ const Home = () => {
             className="relative mt-24 text-center overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: `url(${ctaBg})` }}
           >
-
             <div className="absolute inset-0 bg-black/50"></div>
-            
+
             <div className="absolute inset-0 flex justify-center items-center">
               <div className="w-full h-[200px] bg-[radial-gradient(circle_at_center,rgba(0,255,255,0.2),transparent_60%)] blur-2xl"></div>
             </div>
@@ -424,6 +443,72 @@ const Home = () => {
                     className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div className="relative overflow-hidden mt-16">
+          <h2 className="text-xl md:text-3xl font-normal text-center mt-5 mb-5 text-[#37CCF7]">
+            24/7 support
+          </h2>
+
+          <h2 className="text-3xl md:text-5xl font-normal text-center mt-5 mb-10">
+            Industry{" "}
+            <span className="bg-gradient-to-r from-[#714DFF] via-[#9C83FF] to-[#E151FF] bg-clip-text text-transparent">
+              Standard
+            </span>
+          </h2>
+
+          <div className="flex gap-6 animate-scroll">
+            {[...cards, ...cards].map((card, index) => (
+              <div
+                key={index}
+                className="min-w-[250px] md:min-w-[300px] bg-white/5 backdrop-blur-md 
+        border border-white/10 rounded-xl p-6 text-left"
+              >
+                <h3 className="text-sm mb-2 text-purple-300">{card.title}</h3>
+
+                <p className="text-xs text-gray-400 leading-relaxed">
+                  {card.desc}
+                </p>
+
+                {/* <span className="text-xs text-blue-400 mt-2 inline-block">
+                  Know more
+                </span> */}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <section
+          className="relative overflow-hidden text-white py-28 px-6 md:px-16 text-center bg-cover bg-center mt-16"
+          style={{ backgroundImage: `url(${bgIndustry})` }}
+        >
+          {/* 🔥 DARK OVERLAY */}
+          <div className="absolute inset-0 bg-black/10"></div>
+
+          {/* CONTENT */}
+          <div className="relative z-10 max-w-4xl mx-auto">
+            {/* HEADING */}
+            <h2 className="text-3xl md:text-6xl font-light leading-tight">
+              The future of your <br />
+              industry{" "}
+              <span className="bg-gradient-to-r from-[#714DFF] via-[#9C83FF] to-[#E151FF] bg-clip-text text-transparent">
+                starts here
+              </span>
+            </h2>
+
+            {/* BUTTONS */}
+            <div className="mt-10 flex flex-col md:flex-row justify-center gap-4">
+              {/* PRIMARY BUTTON */}
+              <button className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-medium">
+                BOOK A DEMO →
+              </button>
+
+              {/* OUTLINE BUTTON */}
+              <button className="px-6 py-2 rounded-full border border-white/30 text-white text-sm font-medium hover:bg-white/10 transition">
+                BUILD AI →
               </button>
             </div>
           </div>
